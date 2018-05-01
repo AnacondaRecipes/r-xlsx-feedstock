@@ -14,22 +14,15 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/xlsx/xlsx_{{ version }}.tar.gz
   sha256: 36727bc330c281dab8a028fab2dde92d032345974b15e3dde920ee16dc6db363
 
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
-
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 4
 
-
   # This is required to make R link correctly on Linux.
   rpaths:
     - lib/R/lib/
     - lib/
-
 
 requirements:
   build:
